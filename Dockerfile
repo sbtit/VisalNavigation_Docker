@@ -26,6 +26,7 @@ RUN apt-get update -y \
     ros-kinetic-gazebo-ros-control \
     ros-kinetic-rviz \
     ros-kinetic-robot-state-publisher \
+    ros-kinetic-joint-state-publisher \
     ros-kinetic-rqt \
     ros-kinetic-rqt-common-plugins \
     ros-kinetic-stereo-image-proc \
@@ -47,6 +48,8 @@ RUN apt-get update -y \
 
 COPY ./entry.sh /
 COPY ./ntp.conf /etc/
+COPY ./setting4.yaml /
+
 RUN chmod +x /entry.sh
 
 ENTRYPOINT ["/entry.sh"]
