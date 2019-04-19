@@ -41,6 +41,7 @@ RUN apt-get update -y \
   && cd catkin_ws/src \
   && git clone https://github.com/sbtit/gopigo3_navigation.git \
   && cd /home/catkin_ws \
+  && cp -rf /home/catkin_ws/src/gopigo3_navigation/pointcloud_to_laserscan/ /home/catkin_ws/src/
   && bash -c "source /opt/ros/kinetic/setup.bash \
   && catkin_make"
 
