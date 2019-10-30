@@ -20,7 +20,8 @@ RUN apt-get update -y \
     ros-kinetic-xacro \
     ros-kinetic-compressed-image-transport \
     ros-kinetic-rqt-image-view \
-    ros-kinetic-gmapping \
+    ros-kinetic-rtabmap-ros \
+    ros-kinetic-robot-localization \
     ros-kinetic-navigation \
     ros-kinetic-gazebo-ros-pkgs \
     ros-kinetic-gazebo-ros-control \
@@ -49,6 +50,7 @@ RUN apt-get update -y \
 COPY ./entry.sh /
 COPY ./ntp.conf /etc/
 COPY ./setting4.yaml /
+COPY ./setting5.yaml /
 
 RUN chmod +x /entry.sh
 
