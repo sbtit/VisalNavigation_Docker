@@ -37,6 +37,8 @@ RUN apt-get update -y \
     ros-kinetic-camera-calibration \
     ros-kinetic-image-view \
     ros-kinetic-uvc-camera \
+    ros-kinetic-image-transport \
+    ros-kinetic-image-transport-plugins \
   && apt-get autoremove -y \
   && rm -rf /var/lib/apt/lists/ \
   && mkdir -p catkin_ws/src \
